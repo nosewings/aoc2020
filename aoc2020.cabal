@@ -1,0 +1,357 @@
+cabal-version:       2.2
+
+name:                aoc2020
+version:             0.1.0.0
+author:              Nicholas Coltharp
+maintainer:          coltharp@pdx.edu
+build-type:          Simple
+license:             GPL-3.0-or-later
+
+common aoc2020
+  build-depends: base                  ==4.14.1.0
+               , async                 ==2.2.4
+               , containers            ==0.6.2.1
+               , difference-monoid     ==0.1.0.0
+               , flow                  ==1.0.21
+               , ghc-typelits-knownnat ==0.7.3
+               , grids                 ==0.5.0.1
+               , singletons            ==2.7
+               , lens                  ==4.19.2
+               , megaparsec            ==9.0.1
+               , monad-loops           ==0.4.3
+               , mtl                   ==2.2.2
+               , multiset              ==0.3.4.3
+               , parser-combinators    ==1.2.1
+               , vector                ==0.12.3.1
+               , QuickCheck            ==2.14.2
+  other-modules: Aoc2020
+  hs-source-dirs: src
+  default-language: Haskell2010
+  default-extensions: ApplicativeDo
+                    , AllowAmbiguousTypes
+                    , BlockArguments
+                    , DataKinds
+                    , ExtendedDefaultRules
+                    , FlexibleContexts
+                    , FunctionalDependencies
+                    , ImportQualifiedPost
+                    , KindSignatures
+                    , LambdaCase
+                    , MultiParamTypeClasses
+                    , MultiWayIf
+                    , NoStarIsType
+                    , OverloadedLists
+                    , OverloadedStrings
+                    , RankNTypes
+                    , RecordWildCards
+                    , ScopedTypeVariables
+                    , StandaloneDeriving
+                    , StrictData
+                    , TemplateHaskell
+                    , TupleSections
+                    , TypeApplications
+                    , TypeFamilies
+                    , TypeOperators
+                    , ViewPatterns
+  ghc-options: -O2
+               -foptimal-applicative-do
+               -fplugin GHC.TypeLits.KnownNat.Solver
+               -threaded
+               -rtsopts
+               "-with-rtsopts= -N"
+
+common day01
+  import: aoc2020
+  other-modules: Day01
+
+executable day01part1
+  import: day01
+  main-is: Day01/Part1.hs
+
+executable day01part2
+  import: day01
+  main-is: Day01/Part2.hs
+
+common day02
+  import: aoc2020
+  other-modules: Day02
+
+executable day02part1
+  import: day02
+  main-is: Day02/Part1.hs
+
+executable day02part2
+  import: day02
+  main-is: Day02/Part2.hs
+
+common day03
+  import: aoc2020
+  other-modules: Day03
+
+executable day03part1
+  import: day03
+  main-is: Day03/Part1.hs
+
+executable day03part2
+  import: day03
+  main-is: Day03/Part2.hs
+
+common day04
+  import: aoc2020
+  other-modules: Day04
+
+executable day04part1
+  import: day04
+  main-is: Day04/Part1.hs
+
+executable day04part2
+  import: day04
+  main-is: Day04/Part2.hs
+
+common day05
+  import: aoc2020
+  other-modules: Day05
+
+executable day05part1
+  import: day05
+  main-is: Day05/Part1.hs
+
+executable day05part2
+  import: day05
+  main-is: Day05/Part2.hs
+
+common day06
+  import: aoc2020
+  other-modules: Day06
+
+executable day06part1
+  import: day06
+  main-is: Day06/Part1.hs
+
+executable day06part2
+  import: day06
+  main-is: Day06/Part2.hs
+
+common day07
+  import: aoc2020
+  other-modules: Day07
+
+executable day07part1
+  import: day07
+  main-is: Day07/Part1.hs
+
+executable day07part2
+  import: day07
+  main-is: Day07/Part2.hs
+
+common day08
+  import: aoc2020
+  other-modules: Day08
+
+executable day08part1
+  import: day08
+  main-is: Day08/Part1.hs
+
+executable day08part2
+  import: day08
+  main-is: Day08/Part2.hs
+
+common day09
+  import: aoc2020
+  other-modules: Day09
+
+executable day09part1
+  import: day09
+  main-is: Day09/Part1.hs
+
+executable day09part2
+  import: day09
+  main-is: Day09/Part2.hs
+
+common day10
+  import: aoc2020
+  other-modules: Day10
+
+executable day10part1
+  import: day10
+  main-is: Day10/Part1.hs
+
+executable day10part2
+  import: day10
+  main-is: Day10/Part2.hs
+
+common day11
+  import: aoc2020
+  other-modules: Day11
+
+executable day11part1
+  import: day11
+  main-is: Day11/Part1.hs
+
+executable day11part2
+  import: day11
+  main-is: Day11/Part2.hs
+
+common day12
+  import: aoc2020
+  other-modules: Day12
+
+executable day12part1
+  import: day12
+  main-is: Day12/Part1.hs
+
+executable day12part2
+  import: day12
+  main-is: Day12/Part2.hs
+
+common day13
+  import: aoc2020
+  other-modules: Day13
+
+executable day13part1
+  import: day13
+  main-is: Day13/Part1.hs
+
+executable day13part2
+  import: day13
+  main-is: Day13/Part2.hs
+
+common day14
+  import: aoc2020
+  other-modules: Day14
+
+executable day14part1
+  import: day14
+  main-is: Day14/Part1.hs
+
+executable day14part2
+  import: day14
+  main-is: Day14/Part2.hs
+
+common day15
+  import: aoc2020
+  other-modules: Day15
+
+executable day15part1
+  import: day15
+  main-is: Day15/Part1.hs
+
+executable day15part2
+  import: day15
+  main-is: Day15/Part2.hs
+
+common day16
+  import: aoc2020
+  other-modules: Day16
+
+executable day16part1
+  import: day16
+  main-is: Day16/Part1.hs
+
+executable day16part2
+  import: day16
+  main-is: Day16/Part2.hs
+
+common day17
+  import: aoc2020
+  other-modules: Day17
+
+executable day17part1
+  import: day17
+  main-is: Day17/Part1.hs
+
+executable day17part2
+  import: day17
+  main-is: Day17/Part2.hs
+
+common day18
+  import: aoc2020
+  other-modules: Day18
+
+executable day18part1
+  import: day18
+  main-is: Day18/Part1.hs
+
+executable day18part2
+  import: day18
+  main-is: Day18/Part2.hs
+
+common day19
+  import: aoc2020
+  other-modules: Day19
+
+executable day19part1
+  import: day19
+  main-is: Day19/Part1.hs
+
+executable day19part2
+  import: day19
+  main-is: Day19/Part2.hs
+
+common day20
+  import: aoc2020
+  other-modules: Day20
+
+executable day20part1
+  import: day20
+  main-is: Day20/Part1.hs
+
+executable day20part2
+  import: day20
+  main-is: Day20/Part2.hs
+
+common day21
+  import: aoc2020
+  other-modules: Day21
+
+executable day21part1
+  import: day21
+  main-is: Day21/Part1.hs
+
+executable day21part2
+  import: day21
+  main-is: Day21/Part2.hs
+
+common day22
+  import: aoc2020
+  other-modules: Day22
+
+executable day22part1
+  import: day22
+  main-is: Day22/Part1.hs
+
+executable day22part2
+  import: day22
+  main-is: Day22/Part2.hs
+
+common day23
+  import: aoc2020
+  other-modules: Day23
+
+executable day23part1
+  import: day23
+  main-is: Day23/Part1.hs
+
+executable day23part2
+  import: day23
+  main-is: Day23/Part2.hs
+
+common day24
+  import: aoc2020
+  other-modules: Day24
+
+executable day24part1
+  import: day24
+  main-is: Day24/Part1.hs
+
+executable day24part2
+  import: day24
+  main-is: Day24/Part2.hs
+
+common day25
+  import: aoc2020
+  other-modules: Day25
+
+executable day25part1
+  import: day25
+  main-is: Day25/Part1.hs
